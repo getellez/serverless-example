@@ -1,0 +1,20 @@
+service: aws-lambda-api-service
+
+frameworkVersion: "1.54.0"
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+  profile: germantellezv
+  region: sa-east-1
+
+
+functions:
+  hello:
+    handler: main.hello
+    events:
+      - http:
+          method: get
+          path: /helloWorld
+

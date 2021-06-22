@@ -24,3 +24,8 @@ sls config credentials --provider aws --key <aws_key_id> --secret <aws_key_secre
 ```
 sls deploy --stage dev --verbose
 ```
+
+## Remove application
+```
+sls remove -s dev -r sa-east-1
+```
